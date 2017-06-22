@@ -15,7 +15,14 @@ const initialState = {
     ]
 }
 
-const reducer = (state, action) => state;
+const reducer = (state, action) => {
+    switch (action.type) {
+        case 'ADD_RECIPE':
+            state.recipes.push({ name: action.name });
+    }
+
+    return state;
+};
 const store = createStore(reducer, initialState);
 
 window.store = store;
