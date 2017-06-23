@@ -18,7 +18,9 @@ const initialState = {
 const reducer = (state, action) => {
     switch (action.type) {
         case 'ADD_RECIPE':
-            state.recipes.push({ name: action.name });
+            return Object.assign({}, state {
+                recipes: state.recipes.concat({ name: action.name })
+            });
     }
 
     return state;
