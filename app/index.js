@@ -21,6 +21,8 @@ const reducer = (state, action) => {
             return Object.assign({}, state {
                 recipes: state.recipes.concat({ name: action.name })
             });
+        case 'ADD_INGREDIENT':
+            return;
     }
 
     return state;
