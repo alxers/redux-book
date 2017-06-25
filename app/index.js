@@ -22,6 +22,11 @@ const reducer = (state, action) => {
                 recipes: state.recipes.concat({ name: action.name })
             });
         case 'ADD_INGREDIENT':
+            const newIngredient = {
+                name: action.name,
+                recipe: action.recipe,
+                quantity: action.quantity
+            };
             return;
     }
 
