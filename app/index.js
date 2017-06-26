@@ -27,7 +27,9 @@ const reducer = (state, action) => {
                 recipe: action.recipe,
                 quantity: action.quantity
             };
-            return;
+            return Object.assign({}, state, {
+                ingredients: state.ingredients.concat(newIngredient)
+            });
     }
 
     return state;
