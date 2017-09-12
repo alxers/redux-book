@@ -34,6 +34,11 @@ const reducer = (state, action) => {
 
     return state;
 };
-const store = createStore(reducer, initialState);
 
+const addIngredient = (recipe, name, quantity) => ({
+    type: 'ADD_INGREDIENT', recipe, name, quantity
+});
+
+const store = createStore(reducer, initialState);
+store.dispatch(addIngredient('Omlette', 'Eggs', 3));
 window.store = store;
