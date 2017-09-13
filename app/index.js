@@ -1,3 +1,4 @@
+// TODO: Put reducers in a separate files
 import { createStore } from 'redux';
 
 const initialState = {
