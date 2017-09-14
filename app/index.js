@@ -1,4 +1,7 @@
 // TODO: Put reducers in a separate files
+//import store from './store/store';
+//import { addRecipe } from './actions/recipes';
+//import { addIngredient } from './actions/ingredients';
 import { createStore } from 'redux';
 
 const initialState = {
