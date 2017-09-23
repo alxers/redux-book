@@ -15,6 +15,8 @@ export default function loadUI() {
     <ul></ul>
     </div>
    `);
+
+  store.subscribe(updateUI);
   
    updateUI();
 }
