@@ -8,6 +8,14 @@ function updateUI() {
   $('.recipes > ul').html(recipes.map(renderRecipe));
 }
 
+function handleAdd() {
+  const $recipeName = $('.recipes > input');
+
+  store.dispatch(addRecipe($recipeName.val()));
+
+  $recipeName.val('');
+}
+
 export default function loadUI() {
   $('#app').append(`
     <div class="recipes">
