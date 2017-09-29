@@ -3,3 +3,5 @@ const logMiddleware = ({ getState, dispatch }) => (next) => (action) => {
 
   next(action);
 };
+
+export default logMiddleware;
